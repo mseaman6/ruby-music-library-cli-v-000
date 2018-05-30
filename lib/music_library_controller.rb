@@ -30,6 +30,8 @@ class MusicLibraryController
       self.list_songs_by_genre
     elsif user_input == "play song"
       self.play_song
+    else
+      user_input = gets until user_input == "exit"
     end
     #until user_input == "exit"
   end
