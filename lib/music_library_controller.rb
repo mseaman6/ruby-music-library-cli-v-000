@@ -20,9 +20,15 @@ class MusicLibraryController
     user_input = gets until user_input == "exit"
   end
 
-  def list_songs
+  def alphabetize_songs
     Song.all.sort_by {|song| song.name}
-    binding.pry
+  end
+
+  def list_songs
+    self.alphabetize_songs.each |song| do
+      counter = 1
+      puts "#{counter}. #{song.artist} - #{song.name} - #{song.genre}"
+    end
   end
 
 end
