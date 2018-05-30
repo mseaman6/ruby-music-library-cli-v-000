@@ -18,4 +18,8 @@ class MusicLibraryController
     user_input = gets until user_input == "exit"
   end
 
+  def list_songs
+    
+  end
+
 end
