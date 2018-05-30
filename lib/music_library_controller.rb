@@ -33,7 +33,6 @@ class MusicLibraryController
     else
       user_input = gets until user_input == "exit"
     end
-    #until user_input == "exit"
   end
 
   def alphabetize_songs
