@@ -20,6 +20,7 @@ class MusicLibraryController
     user_input = gets
     if user_input == "list songs"
       self.list_songs
+    end
     #until user_input == "exit"
   end
 
