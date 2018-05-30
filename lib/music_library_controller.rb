@@ -1,3 +1,5 @@
+require 'pry'
+
 class MusicLibraryController
 
   def initialize(path = "./db/mp3s")
@@ -20,6 +22,7 @@ class MusicLibraryController
 
   def list_songs
     Song.all.sort_by {|song| song.name}
+    
   end
 
 end
