@@ -32,8 +32,16 @@ class MusicLibraryController
     end
   end
 
-  def alphabetize_artist
+  def alphabetize_artists
     Artist.all.sort_by {|artist| artist.name}
+  end
+
+  def list_artist
+    counter = 1
+    self.alphabetize_artists.each do |artist|
+      puts
+      counter += 1
+    end
   end
 
 end
