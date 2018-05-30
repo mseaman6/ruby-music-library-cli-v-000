@@ -58,8 +58,8 @@ class Song
     song = filename.split(" - ")[1]
     artist = filename.split(" - ")[0]
     genre = filename.split(" - ")[2].slice!("mp3")
-    if self.find_by_name(name)
-      self.find_by_name(name)
+    if self.find_by_name(song)
+      self.find_by_name(song)
     else
       new_song = self.new(song, artist, genre)
     end
