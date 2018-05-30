@@ -86,6 +86,7 @@ class MusicLibraryController
 
   def play_song
     puts "Please"
+    chosen_song = gets
   end
 
 end
