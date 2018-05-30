@@ -14,7 +14,11 @@ class Song
       self.artist=(new_artist)
     end
     #self.artist=(artist) unless artist == nil
-    self.genre=(genre) unless genre == nil
+    if genre != nil
+      new_genre = Genre.create(genre) unless Genre.all.include?(genre)
+      self.genre=(new_genre)
+    end
+    #self.genre=(genre) unless genre == nil
   end
 
   def self.all
