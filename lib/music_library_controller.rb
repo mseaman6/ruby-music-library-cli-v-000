@@ -51,7 +51,7 @@ class MusicLibraryController
   def list_genres
     counter = 1
     self.alphabetize_genres.each do |genre|
-      puts "#{counter}. #{genre}"
+      puts "#{counter}. #{genre.name}"
       counter += 1
     end
   end
