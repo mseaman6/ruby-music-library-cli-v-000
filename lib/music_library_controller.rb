@@ -22,7 +22,7 @@ class MusicLibraryController
 
   def list_songs
     Song.all.sort_by {|song| song.name}
-    
+    binding.pry
   end
 
 end
