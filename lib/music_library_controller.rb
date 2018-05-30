@@ -89,7 +89,7 @@ class MusicLibraryController
     chosen_song = gets.to_i
     abc_songs = self.alphabetize_songs
     if chosen_song <= self.alphabetize_songs.length && chosen_song >= 1
-      puts abc_songs[chosen_song]
+      puts abc_songs
     end
   end
 
