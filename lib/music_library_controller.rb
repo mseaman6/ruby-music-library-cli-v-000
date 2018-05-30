@@ -87,6 +87,10 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     chosen_song = gets
+    abc_songs = self.alphabetize_songs
+    if chosen_song <= self.alphabetize_songs.length && chosen_song >= 1
+      abc_songs[chosen_song]
+    end
   end
 
 end
