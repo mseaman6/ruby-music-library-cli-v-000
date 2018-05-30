@@ -19,7 +19,7 @@ class MusicLibraryController
   end
 
   def list_songs
-    
+    Song.all
   end
 
 end
