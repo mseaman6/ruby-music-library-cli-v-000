@@ -9,16 +9,16 @@ class Song
 
   def initialize(name, artist = nil, genre = nil)
     @name = name
-    if artist != nil
+    #if artist != nil
       #new_artist = Artist.find_or_create_by_name(artist) unless Artist.all.include?(artist)
-      self.artist=(new_artist)
-    end
-    #self.artist=(artist) unless artist == nil
-    if genre != nil
+      #self.artist=(new_artist)
+    #end
+    self.artist=(artist) unless artist == nil
+    #if genre != nil
       #new_genre = Genre.find_or_create_by_name(genre) unless Genre.all.include?(genre)
-      self.genre=(new_genre)
-    end
-    #self.genre=(genre) unless genre == nil
+      #self.genre=(new_genre)
+    #end
+    self.genre=(genre) unless genre == nil
   end
 
   def self.all
