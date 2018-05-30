@@ -32,4 +32,8 @@ class MusicLibraryController
     end
   end
 
+  def alphabetize_artist
+    Artist.all.sort_by {|artist| artist.name}
+  end
+
 end
