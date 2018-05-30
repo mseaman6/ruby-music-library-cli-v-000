@@ -17,7 +17,10 @@ class MusicLibraryController
     puts "To play a song, enter 'play song'."
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
-    user_input = gets until user_input == "exit"
+    user_input = gets
+    if user_input == "list songs"
+      self.list_songs
+    #until user_input == "exit"
   end
 
   def alphabetize_songs
