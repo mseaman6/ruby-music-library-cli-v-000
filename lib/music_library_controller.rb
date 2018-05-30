@@ -27,7 +27,7 @@ class MusicLibraryController
   def list_songs
     counter = 1
     self.alphabetize_songs.each do |song|
-      puts "#{counter}. #{song.artist} - #{song.name} - #{song.genre}"
+      puts "#{counter}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
       counter += 1
     end
   end
