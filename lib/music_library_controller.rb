@@ -63,7 +63,7 @@ class MusicLibraryController
       artist = Artist.find_by_name(artist_name)
       counter = 1
       artist.songs.each do |song|
-        puts "#{counter}. #{song} - #{song.genre}"
+        puts "#{counter}. #{song.name} - #{song.genre}"
         counter += 1
       end
     end
