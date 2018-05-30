@@ -44,4 +44,12 @@ class MusicLibraryController
     end
   end
 
+  def alphabetize_genres
+    Genre.all.sort_by {|genre| genre.name}
+  end
+
+  def list_genres
+
+  end
+
 end
