@@ -70,4 +70,10 @@ class MusicLibraryController
     end
   end
 
+  def list_songs_by_genre
+    puts "Please enter the name of the genre:"
+    genre_name = gets
+
+  end
+
 end
