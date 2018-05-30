@@ -10,12 +10,12 @@ class Song
   def initialize(name, artist = nil, genre = nil)
     @name = name
     if artist != nil
-      new_artist = Artist.find_or_create_by_name(artist) unless Artist.all.include?(artist)
+      #new_artist = Artist.find_or_create_by_name(artist) unless Artist.all.include?(artist)
       self.artist=(new_artist)
     end
     #self.artist=(artist) unless artist == nil
     if genre != nil
-      new_genre = Genre.find_or_create_by_name(genre) unless Genre.all.include?(genre)
+      #new_genre = Genre.find_or_create_by_name(genre) unless Genre.all.include?(genre)
       self.genre=(new_genre)
     end
     #self.genre=(genre) unless genre == nil
@@ -65,11 +65,13 @@ class Song
   def self.new_from_filename(filename)
     song = filename.split(" - ")[1]
     artist = filename.split(" - ")[0]
+    new_artist = Artist.find_or_create_by_name(artist) unless Artist.all.include?(artist)
     genre = filename.split(" - ")[2].chomp(".mp3")
+    new_genre = Genre.find_or_create_by_name(genre) unless Genre.all.include?(genre)
     if self.find_by_name(song)
       self.find_by_name(song)
     else
-      new_song = self.new(song, artist, genre)
+      new_song = self.new(song, new_artist, new_genre)
     end
   end
 
